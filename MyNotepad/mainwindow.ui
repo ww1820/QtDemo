@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>664</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>664</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_F">
+    <property name="title">
+     <string>File(&amp;F)</string>
+    </property>
+    <addaction name="actionNew_N"/>
+    <addaction name="actionOpen_O"/>
+    <addaction name="actionSave_S"/>
+    <addaction name="actionSave_As_A"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint_P"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit_E"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_E">
+    <property name="title">
+     <string>Edit(&amp;E)</string>
+    </property>
+    <addaction name="actionUndo_U"/>
+    <addaction name="actionRedo_R"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut_T"/>
+    <addaction name="actionCopy_C"/>
+    <addaction name="actionPaste_P"/>
+    <addaction name="actionDelete_D"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind_F"/>
+    <addaction name="actionAdvance_V"/>
+    <addaction name="actionNext_N"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_All_A"/>
+    <addaction name="actionTime_Date_D"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions_O">
+    <property name="title">
+     <string>Options(&amp;O)</string>
+    </property>
+    <addaction name="actionAuto_Wrap_W"/>
+    <addaction name="actionFont_F"/>
+    <addaction name="actionColor"/>
+   </widget>
+   <widget class="QMenu" name="menuView_V">
+    <property name="title">
+     <string>View(&amp;V)</string>
+    </property>
+    <widget class="QMenu" name="menuZoom_Z">
+     <property name="title">
+      <string>Zoom(&amp;Z)...</string>
+     </property>
+     <addaction name="actionZoom_In_I"/>
+     <addaction name="actionZoom_Out_O"/>
+    </widget>
+    <addaction name="menuZoom_Z"/>
+    <addaction name="separator"/>
+    <addaction name="actionStatus_S"/>
+   </widget>
+   <addaction name="menuFile_F"/>
+   <addaction name="menuEdit_E"/>
+   <addaction name="menuOptions_O"/>
+   <addaction name="menuView_V"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew_N">
+   <property name="text">
+    <string>New File(&amp;N)...</string>
+   </property>
+  </action>
+  <action name="actionNew_Window_W">
+   <property name="text">
+    <string>New Window(&amp;W)...</string>
+   </property>
+  </action>
+  <action name="actionOpen_O">
+   <property name="text">
+    <string>Open(&amp;O)...</string>
+   </property>
+  </action>
+  <action name="actionSave_S">
+   <property name="text">
+    <string>Save(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionSave_As_A">
+   <property name="text">
+    <string>Save As(&amp;A)...</string>
+   </property>
+  </action>
+  <action name="actionPrint_P">
+   <property name="text">
+    <string>Print(&amp;P)...</string>
+   </property>
+  </action>
+  <action name="actionExit_E">
+   <property name="text">
+    <string>Exit(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionOptions_O">
+   <property name="text">
+    <string>Options(&amp;O)...</string>
+   </property>
+  </action>
+  <action name="actionUndo_U">
+   <property name="text">
+    <string>Undo(&amp;U)</string>
+   </property>
+  </action>
+  <action name="actionCut_T">
+   <property name="text">
+    <string>Cut(&amp;T)</string>
+   </property>
+  </action>
+  <action name="actionCopy_C">
+   <property name="text">
+    <string>Copy(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionPaste_P">
+   <property name="text">
+    <string>Paste(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionDelete_D">
+   <property name="text">
+    <string>Delete(&amp;D)</string>
+   </property>
+  </action>
+  <action name="actionFind_F">
+   <property name="text">
+    <string>Find&amp;&amp;Replace(&amp;F)...</string>
+   </property>
+  </action>
+  <action name="actionAdvance_V">
+   <property name="text">
+    <string>Advance(&amp;V)</string>
+   </property>
+  </action>
+  <action name="actionNext_N">
+   <property name="text">
+    <string>Next(&amp;N)</string>
+   </property>
+  </action>
+  <action name="actionReplace_R">
+   <property name="text">
+    <string>Replace(&amp;R)...</string>
+   </property>
+  </action>
+  <action name="actionGoto_G">
+   <property name="text">
+    <string>Goto...(&amp;G)</string>
+   </property>
+  </action>
+  <action name="actionAuto_Wrap_W">
+   <property name="text">
+    <string>Auto Wrap(&amp;W)</string>
+   </property>
+  </action>
+  <action name="actionFont_F">
+   <property name="text">
+    <string>Font(&amp;F)...</string>
+   </property>
+  </action>
+  <action name="actionZoom_In_I">
+   <property name="text">
+    <string>Zoom In(&amp;I)</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out_O">
+   <property name="text">
+    <string>Zoom Out(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionStatus_S">
+   <property name="text">
+    <string>Status(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionRedo_R">
+   <property name="text">
+    <string>Redo(&amp;R)</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="text">
+    <string>Color...</string>
+   </property>
+  </action>
+  <action name="actionSelect_All_A">
+   <property name="text">
+    <string>Select All(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionTime_Date_D">
+   <property name="text">
+    <string>Time/Date(&amp;D)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
