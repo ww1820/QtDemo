@@ -20,7 +20,6 @@ void MainWindow::init()
     myTimer = new QTimer();
     cnt = 0;
     ui->progressBar->setValue(cnt);
-    ui->progressBar->setValue(cnt);
     ui->startButton->setDisabled(false);
     ui->pauseButton->setDisabled(true);
     ui->stopButton->setDisabled(true);
