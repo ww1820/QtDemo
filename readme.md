@@ -23,7 +23,7 @@
 2. 点击submit后清空文本框，关闭对话框；
 3. LineEdit激活时回车运行程序。
 
-笔记：[运行对话框demo.md](https://)
+笔记：[运行对话框demo.md](/Note/%E8%BF%90%E8%A1%8C%E5%AF%B9%E8%AF%9D%E6%A1%86demo.md)
 
 ## 进度条功能
 
