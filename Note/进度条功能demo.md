@@ -1,6 +1,6 @@
-# demo
+# 进度条功能demo
 
-项目完整代码：[MyLayout](https://github.com/ww1820/QtDemo/tree/main/MyTimer)
+项目完整代码：[MyTimer](https://github.com/ww1820/QtDemo/tree/main/MyTimer)
 
 ## 界面
 

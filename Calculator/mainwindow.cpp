@@ -27,7 +27,7 @@ void MainWindow::_init()
 
     std::stack<double>().swap(_numStk);
     std::stack<QString>().swap(_opStk);
-    std::queue<QString>().swap(_tmpStk);
+    std::queue<QString>().swap(_tmpQue);
 //    _numStk.swap(std::stack<double>());
 //    _opStk.swap(std::stack<QString>());
 //    _tmpStk.swap(std::queue<QString>());
@@ -78,31 +78,31 @@ void MainWindow::_init()
             this, SLOT(pushBackspaceButton()));
 }
 
-QString MainWindow::_parse(QString curOp)
+QString MainWindow::_parse(QString curSymbol)
 {
     QString ret = "";
-    if(curOp == ")")
+    if(curSymbol == ")")
     {
         while (_opStk.top() != "(") {
-            _tmpStk.push(_opStk.top());
+            _tmpQue.push(_opStk.top());
             _opStk.pop();
         }
         _opStk.pop();
 
-        while (!_tmpStk.empty()) {
+        while (!_tmpQue.empty()) {
             double v1 = _numStk.top();
             _numStk.pop();
             double v2 = _numStk.top();
             _numStk.pop();
-            double res = _cal(v2, v1, _tmpStk.front());
-            _tmpStk.pop();
+            double res = _cal(v2, v1, _tmpQue.front());
+            _tmpQue.pop();
             _numStk.push(res);
             ret = QString::number(res);
         }
     }
     while(!_opStk.empty() && _opStk.top() != "(" &&
           (_opStk.top() == "*" || _opStk.top() == "/"
-           ||curOp == "+" || curOp == "-"))
+           ||curSymbol == "+" || curSymbol == "-"))
     {
         double v1 = _numStk.top();
         _numStk.pop();
@@ -113,9 +113,9 @@ QString MainWindow::_parse(QString curOp)
         _numStk.push(res);
         ret = QString::number(res);
     }
-    if(curOp != ")")
+    if(curSymbol != ")")
     {
-        _opStk.push(curOp);
+        _opStk.push(curSymbol);
     }
 
     return ret;
@@ -162,7 +162,6 @@ void MainWindow::_setParText()
         btnLabel->setText("");
     }
 }
-
 
 void MainWindow::_updateExp()
 {
@@ -413,7 +412,7 @@ void MainWindow::pushClearButton()
 
     std::stack<double>().swap(_numStk);
     std::stack<QString>().swap(_opStk);
-    std::queue<QString>().swap(_tmpStk);
+    std::queue<QString>().swap(_tmpQue);
     ui->lineEdit->setText("0");
     ui->resLabel->clear();
 }

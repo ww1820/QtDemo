@@ -40,17 +40,20 @@ void Boom::init()
 void Boom::LCDUpdate()
 {
     --num;
-    ui->lcdNumber->display(num);
+
     if(num == 0)
     {
         ui->gifLabel->show();
         boomGif->start();
-        this->showFullScreen();// 窗口全屏
+        this->showMaximized();// 窗口最大化
         ui->lcdNumber->hide();
     }
 
     if(num == -7)
     {
-        close();
+        boomGif->stop();
+        myTimer->stop();
     }
+
+    ui->lcdNumber->display(num);
 }

@@ -33,11 +33,11 @@ private:
 
     std::stack<double> _numStk; //暂存的操作数
     std::stack<QString> _opStk; //暂存的操作符
-    std::queue<QString> _tmpStk; // ()中的操作符
+    std::queue<QString> _tmpQue; // ()中的操作符
     int lParNum; //  未匹配( 的数目
 
     void _init();
-    QString _parse(QString curOP);
+    QString _parse(QString);
     double _cal(double, double, QString);
     void _setParText();
     void _updateExp();

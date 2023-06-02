@@ -18,7 +18,6 @@ SubDialog::~SubDialog()
 void SubDialog::init()
 {
 //    this->setAttribute(Qt::WA_ShowWithoutActivating,true);
-    this->setFocusPolicy(Qt::NoFocus);
     connect(ui->findButton, SIGNAL(clicked()),
             this, SLOT(sendFindSignal()));
     connect(ui->replaceButton, SIGNAL(clicked()),
